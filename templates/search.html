@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="margin: 70%;"></div>
+{% for el in data %}
+<table class="table">
+    <style>
+        /* Стили для оформления таблицы */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            width: 80px;
+        }
+
+    </style>
+    <tbody>
+    <tr>
+        <th>Ссылка на марку</th>
+        <td>{{el['Unnamed: 0']}}</td>
+    </tr>
+    <tr>
+        <th>Текст открытки</th>
+        <td>{{el['Текст открытки']}}</td>
+    </tr>
+    <tr>
+        <th>Имя отправителя</th>
+        <td>{{el['Имя отправителя']}}</td>
+    </tr>
+    <tr>
+        <th>Адрес отправителя</th>
+        <td>{{el['Адрес отправителя']}}</td>
+    </tr>
+    <tr>
+        <th>Адрес получателя</th>
+        <td>{{el['Адрес получателя']}}</td>
+    </tr>
+    <tr>
+        <th>Имя получателя</th>
+        <td>{{el['Имя получателя']}}</td>
+    </tr>
+    <tr>
+        <th>Дата печати открытки</th>
+        <td>{{el['Дата печати открытки']}}</td>
+    </tr>
+    <tr>
+        <th>Доп. сведения о получателе</th>
+        <td>{{el['Доп. сведения о получателе']}}</td>
+    </tr>
+    <tr>
+        <th>Доп. сведения об отправителе</th>
+        <td>{{el['Доп. сведения об отправителе']}}</td>
+    </tr>
+    <tr>
+        <th>Дата открытки (нормализованная)</th>
+        <td>{{el['Дата открытки (нормализованная)']}}</td>
+    </tr>
+    <tr>
+        <th>Страна (откуда)</th>
+        <td>{{el['Страна (откуда)']}}</td>
+    </tr>
+    <tr>
+        <th>Страна (куда)</th>
+        <td>{{el['Страна (куда)']}}</td>
+    </tr>
+    </tbody>
+</table>
+{% endfor %}
+
+{% endblock %}

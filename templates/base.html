@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Корпус "Пишу тебе"</title>
+    <link rel="stylesheet" href="static/styles/style.css">
+    <link rel="stylesheet" href="static/styles/dash_board style.css">
+    <link rel="shortcut icon" type="image/png" href="static/img/logo.ico"/>
+</head>
+<body>
+<header class="header">
+    <div class="header-content">
+        <h1 class="header-title">Архив писем «Пишу тебе»</h1>
+        <div class="menu">
+            <button onclick="location.href = '/dash_board';" class="main-btn">Подробная информация</button>
+            <button onclick="location.href = '/';" class="main-btn">На главную</button>
+        </div>
+    </div>
+
+</header>
+
+<main role="main" class="main-content">
+    {% block content %}{% endblock %}
+</main>
+
+</body>
+</html>

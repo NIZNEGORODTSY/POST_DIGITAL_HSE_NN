@@ -1,0 +1,254 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+            height: 100vh;
+            margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 30%;
+    left: -5%;
+    transform: translate(-50%, -50%);
+    transform: rotate(270deg);
+    border: 5px solid #95d3e5;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.slider-container {
+    text-align: center;
+}
+
+#value {
+    font-size: 3rem;
+    color: #4CAF50;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 300px;
+    height: 15px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+    transition: background .15s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #45a049;
+}
+.map {
+  position: absolute;
+  top: 68.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 1px solid #95d3e5;
+
+}
+#img {
+    border-radius: 10px;
+}
+
+.header {
+    background: #95d3e5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    height: 12%;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 20px;
+    text-align: center;
+}
+
+.header-title {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #2b2d42;
+    margin: 0;
+    letter-spacing: -0.5px;
+    font-weight: 400;
+}
+
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 1.5rem;
+        padding: 0 15px;
+    }
+
+    .header-content {
+        padding: 1rem 20px;
+    }
+}
+
+.main {
+    margin-top: 20px;
+    background-color: blue;
+}
+
+.search {
+    position: absolute;
+    top: 30%;
+    right: -8%;
+    transform: translate(-50%, -50%);
+}
+
+.search-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 20px;
+  position: absolute;
+  right: -2.5%;
+  top: 8.5%;
+
+
+}
+
+.search-form {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  flex-direction: column;
+  width: 200px;
+  right: 15%;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 5px solid #95d3e5;
+  border-radius: 30px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 4px 10px rgba(74,144,226,0.2);
+}
+
+.search-button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background: #59d2f7;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.search-button:hover {
+  background: #357abd;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 480px) {
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-button {
+    padding: 12px 20px;
+    width: 100%;
+  }
+}
+
+/* Дополнительные эффекты */
+.search-input::placeholder {
+  color: #a0a0a0;
+  transition: opacity 0.3s ease;
+}
+
+.search-input:focus::placeholder {
+  opacity: 0.5;
+}
+
+.search-button:active {
+  transform: translateY(1px);
+}
+
+.table {
+    border: 4px solid #59d2f7;
+    border-radius: 10px;
+    justify-content: center;
+    border-collapse: separate;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-btn {
+    margin-top: 5px;
+    font-size: 1em;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    bottom: 10%;
+    position: absolute;
+    top: 0;
+    left: 85.25%;
+    margin-top: 6px;
+    width: 200px;
+}
+
+.main-btn:hover {
+    background: #59d2f7;
+    transform: translateY(-5px); /* Поднимаем кнопку вверх */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+

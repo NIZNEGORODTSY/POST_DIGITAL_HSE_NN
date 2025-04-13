@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="up">
+    <div class="container">
+        <div class="slider-container">
+            <input type="range" min="1" max="7" value="1" id="slider">
+        </div>
+    </div>
+
+    <div class="map">
+        <img id="img" src="static/img/0.png">
+    </div>
+
+    <div class="search-container">
+        <form class="search-form" action="/search" method="get">
+            <input type="text" name="query" placeholder="Поиск..." class="search-input">
+            <button type="submit" class="search-button">Найти</button>
+        </form>
+    </div>
+</div>
+
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('slider');
+            const value = document.getElementById('value');
+            var image = document.getElementById('img');
+            const images = ["static/img/0.png", "static/img/1.png", "static/img/2.png", "static/img/3.png", "static/img/4.png", "static/img/5.png", "static/img/6.png"];
+
+            slider.addEventListener('input', function() {
+                const index = this.value - 1;
+                if (index >= 0 && index < images.length) {
+                    image.src = images[index];
+                    value.textContent = this.value;
+                }
+            });
+
+
+            value.textContent = slider.value;
+            image.src = images[slider.value - 1];
+        });
+
+
+
+
+
+
+
+
+
+
+
+</script>
+{% endblock %}
